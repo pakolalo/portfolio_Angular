@@ -1,0 +1,45 @@
+<header class="header">
+  <div class="container">
+    <a href="" class="logo">
+      <img [src]="logoWImg" alt="Logo image">
+    </a>
+    <button class="nav-toggle-btn"
+      (click)="toggleNavBar()"
+      [class.active]="activeMenu"
+      id="box">
+      <span class="line line-1"></span>
+      <span class="line line-2"></span>
+    </button>
+    <nav class="navbar" [class.active]="activeMenu">
+      <ul class="navbar-list">
+        <li>
+          <img class="navbar-link" [src]="logoBImg" alt="Logo image">
+        </li>
+        <li>
+          <a
+          routerLink="/"
+          (click)="toggleNavBar()"
+          class="navbar-link">Home</a>
+        </li>
+        <li>
+          <a routerLink="/portfolio"
+          (click)="toggleNavBar()"
+          class="navbar-link">Portfolio</a>
+        </li>
+        <li>
+          <a routerLink="/services"
+          (click)="toggleNavBar()"
+          class="navbar-link">Services</a>
+        </li>
+        <li>
+          <a routerLink="/skills"
+          (click)="toggleNavBar()"
+          class="navbar-link">Skills</a>
+        </li>
+        <li>
+          <a href="mailto:info@iscodelcollado.com" class="navbar-link">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>

@@ -1,0 +1,45 @@
+.skills .container {
+  margin-top: 95px;
+}
+
+.skills .section-text { margin-block-end: 20px;}
+
+.skills .btn { margin-block: 45px;}
+
+.skills-list li { margin-block-end: 30px;}
+
+.progress-wrapper {
+  display: flex;
+  justify-content: space-between;
+  font-weight: var(--fw-700);
+  margin-block-end: 5px;
+}
+
+.progress-bg {
+  height: 6px;
+  background-color: var(--raisin-black);
+  border-radius: var(--radius-pill);
+}
+
+.progress {
+  height: inherit;
+  background-color: var(--white);
+  border-radius: inherit;
+}
+
+@media (min-width: 768px) {
+  .skills-wrapper {
+    display: grid;
+    grid-template-columns: 0.8fr 1fr;
+    gap: 40px;
+  }
+
+  .skills .btn {margin-block-end: 0;}
+
+}
+
+@media (min-width: 992px) {
+  .skills .section-title { max-width: 16ch;}
+
+  .skills-wrapper { gap: 10%;}
+}

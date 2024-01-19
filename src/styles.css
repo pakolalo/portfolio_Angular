@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&display=swap');
+
+:root {
+  /* COLORS*/
+  --raisin-black: hsla(231, 10%, 14%, 1);
+  --roman-silver: hsla(229, 10%, 57%, 1);
+  --eerie-black: hsla(228, 9%, 10%, 1);
+  --black: hsla(0, 0%, 0%, 1);
+  --white: hsla(0, 0%, 100%, 1);
+  --white_a10: hsla(0, 0%, 100%, 0.1);
+  --white_a5: hsla(0, 0%, 100%, .05);
+
+  /* TYPOGRAPHY*/
+
+  --ff-syne: 'Syne', sans-serif;
+
+  --fs-1: 4.8rem;
+  --fs-2: 4.5rem;
+  --fs-3: 4rem;
+  --fs-4: 2.4rem;
+  --fs-5: 2rem;
+  --fs-6: 1.8rem;
+  --fs-7: 1.4rem;
+  --fs-8: 1.2rem;
+
+  --fw-800: 800;
+  --fw-700: 700;
+
+  /*SPACING*/
+
+  --section-padding: 100px;
+
+  /*BORDER RADIUS*/
+
+  --radius-pill: 100px;
+  --radius-circle: 50%;
+  --blob-radius: 52% 48% 59% 41% / 53% 40% 60% 47%;
+
+  /*TRANSITION*/
+
+  --transition-1: .25s ease;
+  --transition-2: .5s ease;
+  --cubic-in: cubic-bezier(.51, .03, .64, .28);
+  --cubic-out: cubic-bezier(.05, .83, .52, .97);
+  --cubic-bounce: .6s cubic-bezier(.68, -.55, .265, 1.55);
+  --cubic-ease-out: 700ms cubic-bezier(.17, .67, 0, 1.01);
+}
+
+  /*RESET*/
+
+  *,
+  *::before,
+  *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--ff-syne);
+  }
+
+  li {list-style: none;}
+
+  a,
+  img,
+  span,
+  data,
+  button {display: block;}
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  img {height: auto;}
+
+  button {
+    background: none;
+    border: none;
+    font: inherit;
+    cursor: pointer;
+  }
+
+  html {
+    font-size: 62.5%;
+    overflow-y: auto;
+    overflow-x: auto;
+  }
+
+  body {
+    background-color: var(--eerie-black);
+    color: var(--roman-silver);
+    font-size: 1.6rem;
+    line-height: 1.75;
+    overflow: hidden;
+  }
+
+  body.loaded {overflow: overlay;}
+
+  body.nav-active {overflow: hidden;}
+
+  ::-webkit-scrollbar {width: 5px;}
+
+  ::-webkit-scrollbar-track { background: transparent;}
+
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--white);
+    border-radius: 20px;
+  }
+
+  .container {
+    padding-inline: 12px;
+  }
+
+  .section {padding-block: var(--section-padding);}
+
+  .h1 {
+    font-size: var(--fs-3);
+    font-weight: var(--fw-800);
+  }
+
+  .h1,
+  .h2,
+  .h4 {
+    color: var(--white);
+    line-height: 1;
+  }
+
+  .h2 {
+    font-size: var(--fs-2);
+  }
+
+  .h3 {
+    color: var(--white);
+    font-size: var(--fs-4);
+    line-height: 1.5;
+  }
+
+  .h4 {font-size: var(--fs-5);}
+
+  .h2,
+  .h3,
+  .h4 {
+    font-weight: var(--fw-700);
+  }
+
+  .has-before {
+    position: relative;
+    z-index: 1;
+  }
+
+  .has-before::before{
+    position: absolute;
+    content: '';
+    z-index: -1;
+  }
+
+  .btn {
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    max-width: max-content;
+    min-width: max-content;
+    padding: 20px 32px;
+  }
+
+  .btn::before{
+    width: 70px;
+    height: 70px;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    border: 2px solid var(--white_a5);
+    border-radius: var(--radius-circle);
+    transition: var(--cubic-bounce);
+  }
+
+  .btn:is(:hover, :focus-visible)::before {
+    left: calc(100% - 70px);
+  }
+
+  .section-title {margin-block-end: 45px;}
+
+  .section-subtitle {
+    text-transform: uppercase;
+    font-size: var(--fs-8);
+    font-weight: var(--fw-700);
+    margin-block: 20px;
+    letter-spacing: 2px;
+  }
+
+  .slider {
+    margin-block-start: 60px;
+    overflow: hidden;
+  }
+
+  .slider-container {
+    position: relative;
+    display: flex;
+    gap: var(--item-gap);
+    transition: transform var(--cubic-ease-out);
+    overflow-x: auto;
+  }
+
+  .slider-item {
+    width: 300px;
+    height: 300px;
+  }
+
+/*MEDIA QUERIES*/
+
+@media (min-width: 575px) {
+  .container {
+    max-width: 570px;
+    width: 100%;
+    margin-inline: auto;
+  }
+}
+
+@media (min-width: 768px) {
+  :root {
+    --fs-2: 6rem;
+    --fs-3: 5.5rem;
+  }
+
+  .container { max-width: 720px;}
+}
+
+@media (min-width: 992px) {
+  :root {
+    --fs-3: 7rem;
+  }
+
+  .container {max-width: 960px;}
+}
+
+@media (min-width: 1200px) {
+  :root {
+    --section-padding: 140px;
+  }
+
+  .container { max-width: 1140px;}
+}

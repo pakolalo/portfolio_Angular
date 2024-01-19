@@ -1,0 +1,64 @@
+.service .container {
+  margin-top: 95px;
+}
+
+.service-list {
+  gap: 1em;
+}
+
+.service-card {
+  position: relative;
+  background-color: var(--white);
+  width: 300px;
+  height: 300px;
+  padding: 50px 40px 40px;
+  transition: var(--transition-2);
+}
+
+.service-card .service-icon {
+  width: 70px;
+  height: 70px;
+}
+
+.service-imgB, .service-imgW {
+  width: 100%;
+}
+
+.service-imgW {
+  display: none;
+}
+
+.service-card .card-title {
+  color: var(--content-color, var(--raisin-black));
+  font-size: var(--fs-6);
+  margin-block: 20px;
+}
+
+.text-lg {
+  font-family: var(--ff-syne);
+  font-size: var(--fs-1);
+}
+
+.service-card .card-number {
+  margin-inline-start: auto;
+  font-weight: var(--fw-800);
+  line-height: .6;
+  max-width: max-content;
+  margin-block-start: 32px;
+  -webkit-text-stroke: 1px var(--content-color, var(--black));
+  -webkit-text-fill-color: transparent;
+  opacity: .3;
+}
+
+.service-card:is(:hover, :focus-within) {
+  background-color: var(--raisin-black);
+  --content-color: var(--white);
+}
+
+.service-card:is(:hover, :focus-within) .service-imgB {
+  display: none;
+}
+
+.service-card:is(:hover, :focus-within) .service-imgW {
+  display: block;
+}
