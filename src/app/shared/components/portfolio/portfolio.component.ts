@@ -52,6 +52,12 @@ export class PortfolioComponent {
         projectUrl: 'https://pakolalo.github.io/batatabit/',
       },
       {
+        img: './../../../../assets/images/trello_clone.jpg',
+        title: 'Trello-Clone',
+        text: 'Angular / Development',
+        projectUrl: 'https://trello-clone-delta-lyart.vercel.app',
+      },
+      {
         img: './../../../../assets/images/My_Day_App.jpg',
         title: 'My Day App',
         text: 'Angular / Development',
