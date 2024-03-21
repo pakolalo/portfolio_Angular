@@ -75,6 +75,12 @@ export class PortfolioComponent {
         text: 'Web App / Development',
         projectUrl: 'https://pakolalo.github.io/hey_movies/',
       },
+      {
+        img: './../../../../assets/images/rick_and_morty.jpg',
+        title: 'Rick and Morty Facts',
+        text: 'Web App / Development',
+        projectUrl: 'https://pakolalo.github.io/Rick-and-Morty/',
+      },
     ];
     this.projects.set(initProjects);
   }
