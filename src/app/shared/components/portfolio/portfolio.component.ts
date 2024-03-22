@@ -52,6 +52,12 @@ export class PortfolioComponent {
         projectUrl: 'https://pakolalo.github.io/batatabit/',
       },
       {
+        img: './../../../../assets/images/lego_super_heroes.jpg',
+        title: 'Lego Super Heroes',
+        text: 'Development',
+        projectUrl: 'https://pakolalo.github.io/Lego-Super-Heroes/',
+      },
+      {
         img: './../../../../assets/images/trello_clone.jpg',
         title: 'Trello-Clone',
         text: 'Angular / Development',
