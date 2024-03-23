@@ -1,14 +1,17 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { Project } from '../../models/project.model';
 import { ProjectComponent } from '../project/project.component';
 import { CommonModule } from '@angular/common';
+import { register } from 'swiper/element/bundle';
+register();
 
 @Component({
   selector: 'app-portfolio',
   standalone: true,
   imports: [CommonModule, ProjectComponent],
   templateUrl: './portfolio.component.html',
-  styleUrl: './portfolio.component.css'
+  styleUrl: './portfolio.component.css',
+  schemas:[CUSTOM_ELEMENTS_SCHEMA],
 })
 export class PortfolioComponent {
   projects = signal<Project[]>([]);

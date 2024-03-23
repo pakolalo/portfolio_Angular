@@ -7,12 +7,19 @@
     </div>
   </div>
   <div class="slider">
-    <ul class="slider-container">
+    <!-- <ul class="slider-container">
       <app-project
       *ngFor="let project of projects()"
       [project]="project"
       ></app-project>
-    </ul>
+    </ul> -->
+    <swiper-container class="slider-container" pagination="true" effect="coverflow" grab-cursor="true" centered-slides="true"
+    slides-per-view="auto" coverflow-effect-rotate="50" coverflow-effect-stretch="0" coverflow-effect-depth="100"
+    coverflow-effect-modifier="1" coverflow-effect-slide-shadows="true">
+      <swiper-slide *ngFor="let project of projects()">
+        <app-project [project]="project"></app-project>
+      </swiper-slide>
+    </swiper-container>
   </div>
 </div>
 </section>
