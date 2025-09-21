@@ -11,4 +11,8 @@ export class FooterComponent {
 
   gitHubLogo = './../../../../assets/images/bxl-github.svg';
   linkedinLogo = './../../../../assets/images/bxl-linkedin-square.svg'
+
+  constructor() {}
+
+  currentYear = new Date().getFullYear();
 }

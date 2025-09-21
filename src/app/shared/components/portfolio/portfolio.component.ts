@@ -25,7 +25,13 @@ export class PortfolioComponent {
         projectUrl: 'https://pakolalo.github.io/ojos_ajenos/',
       },
       {
-        img: './../../../../assets/images/beble_page.jpg',
+        img: './../../../../assets/images/bacaandara_web.jpeg',
+        title: 'Bacaadar´a',
+        text: 'Website Design / Development',
+        projectUrl: 'https://www.vivebacaandara.com/',
+      },
+      {
+        img: './../../../../assets/images/beble_web.jpeg',
         title: 'Beble',
         text: 'Website Design / Development',
         projectUrl: 'https://beble.mx',
