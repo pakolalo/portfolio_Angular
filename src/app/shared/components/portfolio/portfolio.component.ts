@@ -37,10 +37,10 @@ export class PortfolioComponent {
         projectUrl: 'https://beble.mx',
       },
       {
-        img: './../../../../assets/images/portfolio_em.jpg',
-        title: 'Portfolio EM',
-        text: 'Development',
-        projectUrl: 'https://estebanmartinez.site',
+        img: './../../../../assets/images/todo_react.png',
+        title: 'Todo App React',
+        text: 'React / Development',
+        projectUrl: 'https://pakolalo.github.io/Todo-App-React/',
       },
       {
         img: './../../../../assets/images/veredas_de_mexico.jpg',
