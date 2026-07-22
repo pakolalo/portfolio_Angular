@@ -76,7 +76,7 @@ export class PortfolioComponent {
         img: './../../../../assets/images/My_Day_App.jpg',
         title: 'My Day App',
         text: 'Angular / Development',
-        projectUrl: 'https://todoapp-xi-eosin.vercel.app/',
+        projectUrl: 'https://todo-app-angular-nu.vercel.app',
       },
       {
         img: './../../../../assets/images/angular_store.jpg',
